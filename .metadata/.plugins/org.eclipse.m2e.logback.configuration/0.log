@@ -1,0 +1,19 @@
+2020-10-29 17:27:20,598 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-29 17:29:42,257 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:DiscoveryService:0.0.1-SNAPSHOT @ /Users/aneesh/Documents/Development/Spring/FPLMicroservice/DiscoveryService/pom.xml.
+2020-10-29 17:30:14,642 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/main/java
+2020-10-29 17:30:14,643 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2020-10-29 17:30:14,654 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2020-10-29 17:30:14,691 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/test/java
+2020-10-29 17:30:25,186 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 67 sec
+2020-10-29 17:30:25,192 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-10-29 17:30:26,319 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:DiscoveryService:0.0.1-SNAPSHOT @ /Users/aneesh/Documents/Development/Spring/FPLMicroservice/DiscoveryService/pom.xml.
+2020-10-29 17:30:27,785 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/main/java
+2020-10-29 17:30:27,785 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2020-10-29 17:30:27,786 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2020-10-29 17:30:27,787 [Worker-7: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/test/java
+2020-10-29 17:30:28,885 [Worker-7: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 3 sec
+2020-10-29 17:30:32,388 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 17:30:32,421 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-29 17:30:32,449 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-29 17:30:32,459 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-29 17:30:32,459 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/aneesh/Documents/Development/Spring/FPLMicroservice/DiscoveryService/src/test/resources
