@@ -16,6 +16,7 @@ public class FixtureServiceApplication {
 	}
 	
 	@Bean
+	@LoadBalanced
 	RestTemplate restTemplate() {
 		RestTemplate restTemplate = new RestTemplate();
 		

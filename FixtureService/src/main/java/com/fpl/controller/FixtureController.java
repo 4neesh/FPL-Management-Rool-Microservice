@@ -25,7 +25,7 @@ public class FixtureController {
     @RequestMapping(value = "/link", method = RequestMethod.GET)
     @ResponseBody
     public Difficulty[] recommendations() {
-        Difficulty[] result = restTemplate.getForObject("http://difficulty-details:8885/test", Difficulty[].class);
+        Difficulty[] result = restTemplate.getForObject("http://difficulty-details/test", Difficulty[].class);
         return result;
     }
     
