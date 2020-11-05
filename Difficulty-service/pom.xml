@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fpl</groupId>
-	<artifactId>Phone-book</artifactId>
+	<artifactId>Difficulty-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Phone-book</name>
-	<description>Phone-book service to store the numbers of different users</description>
+	<description>Difficulty service to obtain values on the team performance home and away</description>
 
 	<properties>
 		<java.version>1.8</java.version>
