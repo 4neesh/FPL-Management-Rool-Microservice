@@ -14,9 +14,4 @@ public class DifficultyServiceApplication {
 		SpringApplication.run(DifficultyServiceApplication.class, args);
 	}
 	
-	@Bean
-	RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
-
 }

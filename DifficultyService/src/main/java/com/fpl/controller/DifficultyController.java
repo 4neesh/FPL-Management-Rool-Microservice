@@ -15,9 +15,6 @@ import com.fpl.entity.Difficulty;
 @RestController
 public class DifficultyController {
 
-	@Autowired
-	RestTemplate restTemplate;
-	
 	private static List<Difficulty> diffList = new ArrayList<>();
     static {
     	diffList.add(new Difficulty("y-1"));
