@@ -1,4 +1,4 @@
-package com.hr;
+package com.fpl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,15 +7,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class HrServiceApplication {
+public class GuiServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrServiceApplication.class, args);
+		SpringApplication.run(GuiServiceApplication.class, args);
 	}
 
 	@Bean
 	@LoadBalanced
-	RestTemplate restTemplate() {
+	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}
 }
