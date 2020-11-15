@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fpl.entity.Difficulty;
@@ -27,6 +28,7 @@ public class DifficultyController {
 	}
 	
 	@GetMapping("/get-difficulties")
+	@ResponseBody
 	public List<Difficulty> getDifficulties(){
 		return service.findAll();
 	}
