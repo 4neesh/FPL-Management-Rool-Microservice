@@ -8,9 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DifficultyServiceApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(DifficultyServiceApplication.class, args);
 	}
 
 	DefaultListableBeanFactory ab = new DefaultListableBeanFactory();
-	
+
 }

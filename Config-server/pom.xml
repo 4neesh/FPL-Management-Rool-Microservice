@@ -8,11 +8,11 @@
 		<version>2.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.config</groupId>
-	<artifactId>Config-server</artifactId>
+	<groupId>com.fpl</groupId>
+	<artifactId>config</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Config-server</name>
-	<description>Configuration server to provide centralised configuration to services</description>
+	<description>Configuration server to distributed services</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -27,6 +27,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-vault-config</artifactId>
 		</dependency>
 
 		<dependency>

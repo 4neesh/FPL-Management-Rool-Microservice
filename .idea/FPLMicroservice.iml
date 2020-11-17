@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/DifficultyService/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Discovery-server/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gui-Service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Config-server/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Config-server/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Config-server/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Config-server/src/main/java/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Config-server/src/main/java/com/fpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Config-server/src/main/java/com/fpl/Configserver" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main/java/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main/java/com/fpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main/java/com/fpl/controller" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main/java/com/fpl/entity" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main/java/com/fpl/repository" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Difficulty-service/src/main/java/com/fpl/service" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DifficultyService/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DifficultyService/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DifficultyService/src/main/java/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DifficultyService/src/main/java/com/fpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DifficultyService/src/main/java/com/fpl/controller" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DifficultyService/src/main/java/com/fpl/entity" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Discovery-server/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Discovery-server/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Discovery-server/src/main/java/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Discovery-server/src/main/java/com/fpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main/java/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main/java/com/fpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main/java/com/fpl/controller" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main/java/com/fpl/entity" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main/java/com/fpl/repository" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fixture-service/src/main/java/com/fpl/service" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gui-Service/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gui-Service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gui-Service/src/main/java/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gui-Service/src/main/java/com/fpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gui-Service/src/main/java/com/fpl/controller" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
