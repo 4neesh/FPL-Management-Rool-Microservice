@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fpl</groupId>
-	<artifactId>hr-service</artifactId>
+	<artifactId>fixture-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hr-service</name>
+	<name>fixture-service</name>
 	<description>Human resources service to obtain contact information</description>
 
 	<properties>
