@@ -1,5 +1,6 @@
 package com.fpl.controller;
 
+import com.fpl.entity.Difficulty;
 import com.fpl.entity.Fixture;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,12 +18,15 @@ public class GuiController {
 	public String getHome() {
 		return "home";
 	}
-	
+
+
 	@GetMapping("/fixtures")
 	public String getFixtures(Model model) {
 
 		Fixture[] fixtures = restTemplate.getForObject("http://fixtureService/getFixtures", Fixture[].class);
+		Difficulty[] difficulties = restTemplate.getForObject("http://difficultyService/get-difficulties", Difficulty[].class);
 		model.addAttribute("fixtures", fixtures);
+		model.addAttribute("difficulties", difficulties);
 		return "fixtures";
 	}
 	
