@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import com.fpl.allEntity.AllDifficulty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +17,8 @@ public class DifficultyServiceImpl implements DifficultyService {
 
 	private DifficultyRepository repository;
 	
-	private static Map<String, Integer> homeMap = new HashMap<>();
-	private static Map<String, Integer> awayMap = new HashMap<>();
+	private static Map<Integer, Integer> homeMap = new HashMap<>();
+	private static Map<Integer, Integer> awayMap = new HashMap<>();
 
 	@Autowired
 	public DifficultyServiceImpl(DifficultyRepository repository) {
@@ -25,10 +26,10 @@ public class DifficultyServiceImpl implements DifficultyService {
 	}
 	
 	@Override
-	public List<Difficulty> findAll() {
+	public List<AllDifficulty> findAll() {
 		
-		List<Difficulty> difficultyList = repository.findAll();
-		for(Difficulty d : difficultyList) {
+		List<AllDifficulty> difficultyList = repository.findAll();
+		for(AllDifficulty d : difficultyList) {
 			homeMap.put(d.getTeam(),d.getHome());
 			awayMap.put(d.getTeam(),d.getAway());
 
@@ -38,8 +39,8 @@ public class DifficultyServiceImpl implements DifficultyService {
 	}
 
 	@Override
-	public Difficulty findDifficulty(int id) {
-		Optional<Difficulty> difficulty = repository.findById(id);
+	public AllDifficulty findDifficulty(int id) {
+		Optional<AllDifficulty> difficulty = repository.findById(id);
 		if(difficulty.isPresent()) {
 			return difficulty.get();
 		}
@@ -47,7 +48,7 @@ public class DifficultyServiceImpl implements DifficultyService {
 	}
 
 	@Override
-	public void save(Difficulty difficulty) {
+	public void save(AllDifficulty difficulty) {
 		
 		if(!homeMap.containsKey(difficulty.getTeam())) {
 			homeMap.put(difficulty.getTeam(), difficulty.getHome());
@@ -60,11 +61,11 @@ public class DifficultyServiceImpl implements DifficultyService {
 		repository.save(difficulty);
 	}
 	@Override
-	public Map<String, Integer> getHomeMap() {
+	public Map<Integer, Integer> getHomeMap() {
 		return homeMap;
 	}
 	@Override
-	public Map<String, Integer> getAwayMap() {
+	public Map<Integer, Integer> getAwayMap() {
 		return awayMap;
 	}
 

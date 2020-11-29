@@ -2,6 +2,7 @@ package com.fpl.controller;
 
 import java.util.List;
 
+import com.fpl.allEntity.AllDifficulty;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +22,7 @@ public class DifficultyController {
 	}
 	
 	@PostMapping("/add-difficulty")
-	public String addDifficulty(@RequestBody Difficulty difficulty) {
+	public String addDifficulty(@RequestBody AllDifficulty difficulty) {
 		
 		service.save(difficulty);
 		return difficulty.toString();
@@ -29,7 +30,7 @@ public class DifficultyController {
 	
 	@GetMapping("/get-difficulties")
 	@ResponseBody
-	public List<Difficulty> getDifficulties(){
+	public List<AllDifficulty> getDifficulties(){
 		return service.findAll();
 	}
 	
