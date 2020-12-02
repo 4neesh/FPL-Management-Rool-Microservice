@@ -3,16 +3,15 @@ package com.fpl.service;
 import java.util.List;
 import java.util.Map;
 
-import com.fpl.allEntity.AllDifficulty;
 import com.fpl.entity.Difficulty;
 
 public interface DifficultyService {
 				
-    public List<AllDifficulty> findAll();
+    public List<Difficulty> findAll();
 
-    public AllDifficulty findDifficulty(int id);
+    public Difficulty findDifficulty(int id);
     
-    public void save(AllDifficulty difficulty);
+    public void save(Difficulty difficulty);
     
     public Map<Integer, Integer> getHomeMap();
 

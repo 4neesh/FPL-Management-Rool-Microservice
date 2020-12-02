@@ -5,11 +5,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import com.fpl.allEntity.AllDifficulty;
+import com.fpl.entity.Difficulty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fpl.entity.Difficulty;
 import com.fpl.repository.DifficultyRepository;
 
 @Service
@@ -26,10 +25,10 @@ public class DifficultyServiceImpl implements DifficultyService {
 	}
 	
 	@Override
-	public List<AllDifficulty> findAll() {
+	public List<Difficulty> findAll() {
 		
-		List<AllDifficulty> difficultyList = repository.findAll();
-		for(AllDifficulty d : difficultyList) {
+		List<Difficulty> difficultyList = repository.findAll();
+		for(Difficulty d : difficultyList) {
 			homeMap.put(d.getTeam(),d.getHome());
 			awayMap.put(d.getTeam(),d.getAway());
 
@@ -39,8 +38,8 @@ public class DifficultyServiceImpl implements DifficultyService {
 	}
 
 	@Override
-	public AllDifficulty findDifficulty(int id) {
-		Optional<AllDifficulty> difficulty = repository.findById(id);
+	public Difficulty findDifficulty(int id) {
+		Optional<Difficulty> difficulty = repository.findById(id);
 		if(difficulty.isPresent()) {
 			return difficulty.get();
 		}
@@ -48,7 +47,7 @@ public class DifficultyServiceImpl implements DifficultyService {
 	}
 
 	@Override
-	public void save(AllDifficulty difficulty) {
+	public void save(Difficulty difficulty) {
 		
 		if(!homeMap.containsKey(difficulty.getTeam())) {
 			homeMap.put(difficulty.getTeam(), difficulty.getHome());

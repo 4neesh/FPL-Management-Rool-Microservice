@@ -1,41 +1,36 @@
 package com.fpl.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name="team_difficulty")
-public class  Difficulty {
+@Table(name="all_difficulty")
+public class Difficulty {
 
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "Id")
     private int id;
-	
+
 
 	@Column(name="Team")
-	private String team;
-	
+	private int team;
+
 	@Column(name="Home")
 	private int home;
-	
+
 
 	@Column(name="Away")
 	private int away;
 
 
-	public String getTeam() {
+	public int getTeam() {
 		return team;
 	}
 
 
-	public void setTeam(String team) {
+	public void setTeam(int team) {
 		this.team = team;
 	}
 
@@ -69,5 +64,5 @@ public class  Difficulty {
 	public String toString() {
 		return "Difficulty [id=" + id + ", team=" + team + ", home=" + home + ", away=" + away + "]";
 	}
-	
+
 }

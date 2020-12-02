@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "fixtures")
+@Table(name = "all_fixtures")
 public class Fixture {
 
 	@Id
@@ -17,10 +17,10 @@ public class Fixture {
     private int id;
 	
 	@Column(name="home")
-    private String home;
+    private int home;
 	
 	@Column(name="away")
-    private String away;
+    private int away;
 	
 	@Column(name="gameweek")
     private int gameweek;
@@ -29,14 +29,14 @@ public class Fixture {
     public Fixture() {
     }
 
-    public Fixture(int id, String home, String away, int gameWeek) {
+    public Fixture(int id, int home, int away, int gameWeek) {
         this.id = id;
         this.home = home;
         this.away = away;
         this.gameweek = gameWeek;
     }
 
-    public Fixture(String home, String away, int gameWeek) {
+    public Fixture(int home, int away, int gameWeek) {
         this.home = home;
         this.away = away;
         this.gameweek = gameWeek;
@@ -50,19 +50,19 @@ public class Fixture {
         this.id = id;
     }
 
-    public String getHome() {
+    public int getHome() {
         return home;
     }
 
-    public void setHome(String home) {
+    public void setHome(int home) {
         this.home = home;
     }
 
-    public String getAway() {
+    public int getAway() {
         return away;
     }
 
-    public void setAway(String away) {
+    public void setAway(int away) {
         this.away = away;
     }
 
