@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import com.fpl.entity.Difficulty;
+import com.fpl.entity.DifficultyJoin;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -66,6 +68,12 @@ public class DifficultyServiceImpl implements DifficultyService {
 	@Override
 	public Map<Integer, Integer> getAwayMap() {
 		return awayMap;
+	}
+
+	@Override
+	public List<DifficultyJoin> findJoinDifficulty() {
+
+		return repository.findDifficultyJoin();
 	}
 
 }
