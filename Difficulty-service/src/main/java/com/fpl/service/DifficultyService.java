@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.fpl.entity.Difficulty;
-import com.fpl.entity.DifficultyJoin;
 
 public interface DifficultyService {
 				
@@ -18,7 +17,6 @@ public interface DifficultyService {
 
     public Map<Integer, Integer> getAwayMap();
     
-    public List<DifficultyJoin> findJoinDifficulty();
-
+    public List<Difficulty> findByHome(int id);
     
 }

@@ -5,12 +5,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import com.fpl.entity.Difficulty;
-import com.fpl.entity.DifficultyJoin;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fpl.entity.Difficulty;
 import com.fpl.repository.DifficultyRepository;
 
 @Service
@@ -22,7 +20,7 @@ public class DifficultyServiceImpl implements DifficultyService {
 	private static Map<Integer, Integer> awayMap = new HashMap<>();
 
 	@Autowired
-	public DifficultyServiceImpl(DifficultyRepository repository) {
+	public DifficultyServiceImpl(DifficultyRepository repository){
 		this.repository = repository;
 	}
 	
@@ -71,9 +69,11 @@ public class DifficultyServiceImpl implements DifficultyService {
 	}
 
 	@Override
-	public List<DifficultyJoin> findJoinDifficulty() {
+	public List<Difficulty> findByHome(int id) {
 
-		return repository.findDifficultyJoin();
+		return 	repository.findByHome(id);
 	}
+
+
 
 }
