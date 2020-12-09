@@ -1,6 +1,7 @@
 package com.fpl.entity;
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,8 +22,8 @@ public class Difficulty {
     private int id;
 
 	
-	@OneToOne
-	@JoinColumn(name="team")
+	@OneToOne(cascade= CascadeType.ALL)
+	@JoinColumn(name="team") 
 	private Team team;
 
 	@Column(name="Home")
