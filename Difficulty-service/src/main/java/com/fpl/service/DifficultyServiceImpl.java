@@ -28,11 +28,11 @@ public class DifficultyServiceImpl implements DifficultyService {
 	public List<Difficulty> findAll() {
 		
 		List<Difficulty> difficultyList = repository.findAll();
-		for(Difficulty d : difficultyList) {
-			homeMap.put(d.getTeam(),d.getHome());
-			awayMap.put(d.getTeam(),d.getAway());
-
-		}
+//		for(Difficulty d : difficultyList) {
+//			homeMap.put(d.getTeam(),d.getHome());
+//			awayMap.put(d.getTeam(),d.getAway());
+//
+//		}
 		
 		return difficultyList;
 	}
@@ -49,12 +49,12 @@ public class DifficultyServiceImpl implements DifficultyService {
 	@Override
 	public void save(Difficulty difficulty) {
 		
-		if(!homeMap.containsKey(difficulty.getTeam())) {
-			homeMap.put(difficulty.getTeam(), difficulty.getHome());
-		}
-		if(!awayMap.containsKey(difficulty.getTeam())) {
-			awayMap.put(difficulty.getTeam(), difficulty.getAway());
-		}
+//		if(!homeMap.containsKey(difficulty.getTeam())) {
+//			homeMap.put(difficulty.getTeam(), difficulty.getHome());
+//		}
+//		if(!awayMap.containsKey(difficulty.getTeam())) {
+//			awayMap.put(difficulty.getTeam(), difficulty.getAway());
+//		}
 		
 		
 		repository.save(difficulty);

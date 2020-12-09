@@ -1,7 +1,14 @@
 package com.fpl.entity;
 
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="all_difficulty")
@@ -13,9 +20,10 @@ public class Difficulty {
 	@Column(name = "Id")
     private int id;
 
-
-	@Column(name="Team")
-	private int team;
+	
+	@OneToOne
+	@JoinColumn(name="team")
+	private Team team;
 
 	@Column(name="Home")
 	private int home;
@@ -23,16 +31,6 @@ public class Difficulty {
 
 	@Column(name="Away")
 	private int away;
-
-
-	public int getTeam() {
-		return team;
-	}
-
-
-	public void setTeam(int team) {
-		this.team = team;
-	}
 
 
 	public int getHome() {
@@ -60,9 +58,15 @@ public class Difficulty {
 	}
 
 
-	@Override
-	public String toString() {
-		return "Difficulty [id=" + id + ", team=" + team + ", home=" + home + ", away=" + away + "]";
+	public Team getTeam() {
+		return team;
 	}
+
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+
+
 
 }
