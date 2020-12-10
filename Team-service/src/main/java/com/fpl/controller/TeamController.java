@@ -11,17 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fpl.entity.Team;
 import com.fpl.service.TeamService;
+import com.fpl.service.TeamServiceImpl;
 
 @RestController
 public class TeamController {
-
+	
+	@Autowired
     private TeamService teamService;
 
-    @Autowired
-    public TeamController(TeamService teamServiceArg){
-        teamServiceArg = teamService;
-    }
-    
+       
     private List<Team> teams;
 
     @GetMapping("/te")
@@ -37,8 +35,8 @@ public class TeamController {
 
     @GetMapping("/getTeams")
     public List<Team> getTeams(){
-    	teams = teamService.findAll();
-        return teams;
+
+        return teamService.findAll();
        
     }
 
