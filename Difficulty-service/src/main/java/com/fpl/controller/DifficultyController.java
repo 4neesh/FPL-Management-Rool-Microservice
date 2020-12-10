@@ -37,4 +37,9 @@ public class DifficultyController {
 		return service.findByHome(id);
 	}
 	
+	@GetMapping("/ran")
+	public List<Object> rand(){
+		return service.rand();
+	}
+	
 }

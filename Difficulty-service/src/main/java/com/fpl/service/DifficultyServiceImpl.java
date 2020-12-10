@@ -74,6 +74,12 @@ public class DifficultyServiceImpl implements DifficultyService {
 		return 	repository.findByHome(id);
 	}
 
+	@Override
+	public List<Object> rand() {
+
+		return repository.difficultyQuery();
+	}
+
 
 
 }
