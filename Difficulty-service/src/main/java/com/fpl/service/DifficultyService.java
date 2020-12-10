@@ -17,8 +17,5 @@ public interface DifficultyService {
 
     public Map<Integer, Integer> getAwayMap();
     
-    public List<Difficulty> findByHome(int id);
-
-	public List<Object> rand();
     
 }

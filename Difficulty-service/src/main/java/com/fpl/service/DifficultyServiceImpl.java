@@ -68,18 +68,5 @@ public class DifficultyServiceImpl implements DifficultyService {
 		return awayMap;
 	}
 
-	@Override
-	public List<Difficulty> findByHome(int id) {
-
-		return 	repository.findByHome(id);
-	}
-
-	@Override
-	public List<Object> rand() {
-
-		return repository.difficultyQuery();
-	}
-
-
 
 }
