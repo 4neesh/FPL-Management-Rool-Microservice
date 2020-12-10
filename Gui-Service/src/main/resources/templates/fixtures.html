@@ -21,8 +21,8 @@
         <tr>
             <th>Gameweek</th>
             <th>Home</th>
-            <th></th>
-            <th></th>
+            <th>Dif</th>
+            <th>Dif</th>
             <th>Away </th>
             <th>Update <a class="btn btn-success btn-sm r" th:href="@{add-fixture}">Add new fixture</a>
             </th>
@@ -33,25 +33,22 @@
         <tr th:each="tempFixture : ${fixtures}">
             <td th:text="${tempFixture.gameweek}"/>
 
-            <td th:text="${tempFixture.home}"/>
-            <td>1</td>
-            <td>2</td>
-<!--            <td th:text="${homeMap.get(tempFixture.home)}"/>-->
-<!--            <td th:text="${awayMap.get(tempFixture.away)}"/>-->
-
-            <td th:text="${tempFixture.away}"/>
-            <td>LO</td>
-<!--            <td>-->
-<!--                <a-->
-<!--                        th:href="@{updateFixture(fixtureId=${tempFixture.id})}"-->
-<!--                        class="btn btn-info btn-sm">Edit</a>-->
-<!--                <a-->
-<!--                        onclick="if (!(confirm('Are you sure you want to delete?'))) return false"-->
-<!--                        th:href="@{delete-fixture(fixtureId=${tempFixture.id})}"-->
-<!--                        class="btn btn-danger btn-sm r">Delete</a></td>-->
+            <td th:text="${tempFixture.home.team}"/>
+            <td>D</td>
+ 			<td>D</td>
+            <td th:text="${tempFixture.away.team}"/>
+           <td>
+               <a
+                  th:href="@{updateFixture(fixtureId=${tempFixture.id})}"
+                  class="btn btn-info btn-sm">Edit</a>
+               <a
+                  onclick="if (!(confirm('Are you sure you want to delete?'))) return false"
+                  th:href="@{delete-fixture(fixtureId=${tempFixture.id})}"
+                  class="btn btn-danger btn-sm r">Delete</a>
+            </td>
         </tr>
         </tbody>
     </table>
 </div>
 </body>
-</html>
+</html> 

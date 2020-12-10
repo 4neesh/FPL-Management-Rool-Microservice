@@ -1,9 +1,15 @@
-package main.java.com.fpl.controller;
-
-import com.fpl.service.TeamService;
-import org.springframework.web.bind.annotation.*;
+package com.fpl.controller;
 
 import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fpl.service.Team;
+import com.fpl.service.TeamService;
 
 @RestController
 public class TeamController {
@@ -14,22 +20,22 @@ public class TeamController {
         teamServiceArg = teamService;
     }
 
-    private List<main.java.com.fpl.service.Team> fixtures;
+    private List<Team> fixtures;
 
 
-    @GetMapping("/getFixture/{id}")
-    public main.java.com.fpl.service.Team getFixture(@PathVariable int id ) {
+    @GetMapping("/getTeam/{id}")
+    public Team getFixture(@PathVariable int id ) {
         return teamService.findTeam(id);
     }
 
-    @GetMapping("/getFixtures")
-    public List<main.java.com.fpl.service.Team> getTeams(){
+    @GetMapping("/getTeams")
+    public List<Team> getTeams(){
         fixtures = teamService.findAll();
         return fixtures;
     }
 
-    @PostMapping("/addFixture")
-    public String addFixture(@RequestBody main.java.com.fpl.service.Team fixture) {
+    @PostMapping("/addTeam")
+    public String addFixture(@RequestBody Team fixture) {
         teamService.save(fixture);
         return fixture.toString();
     }

@@ -1,26 +1,22 @@
 package com.fpl.entity;
 
+public class Team {
 
-public enum Team {
-    ARS,
-    AST,
-    BHA,
-    WBA,
-    BUR,
-    CHE,
-    CRY,
-    EVE,
-    LEI,
-    LIV,
-    MCY,
-    MUN,
-    NEW,
-    FUL,
-    SHU,
-    SOT,
-    TOT,
-    LEE,
-    WHU,
-    WOL
+    private int id;
+	private String team;
 
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
+	public int getId() {
+		return id;
+	}
+	
+	
+	
 }

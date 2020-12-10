@@ -3,22 +3,22 @@ package com.fpl.entity;
 public class Fixture {
 
     private int id;
-    private String home;
-    private String away;
+    private Team home;
+    private Team away;
     private int gameweek;
 
 
     public Fixture() {
     }
 
-    public Fixture(int id, String home, String away, int gameWeek) {
+    public Fixture(int id, Team home, Team away, int gameWeek) {
         this.id = id;
         this.home = home;
         this.away = away;
         this.gameweek = gameWeek;
     }
 
-    public Fixture(String home, String away, int gameWeek) {
+    public Fixture(Team home, Team away, int gameWeek) {
         this.home = home;
         this.away = away;
         this.gameweek = gameWeek;
@@ -32,19 +32,19 @@ public class Fixture {
         this.id = id;
     }
 
-    public String getHome() {
+    public Team getHome() {
         return home;
     }
 
-    public void setHome(String home) {
+    public void setHome(Team home) {
         this.home = home;
     }
 
-    public String getAway() {
+    public Team getAway() {
         return away;
     }
 
-    public void setAway(String away) {
+    public void setAway(Team away) {
         this.away = away;
     }
 
@@ -58,14 +58,6 @@ public class Fixture {
         this.gameweek = gameweek;
     }
 
-    @Override
-    public String toString() {
-        return "Fixture{" +
-                "id=" + id +
-                ", home=" + home +
-                ", away=" + away +
-                ", gameweek=" + gameweek +
-                '}';
-    }
+
 
 }

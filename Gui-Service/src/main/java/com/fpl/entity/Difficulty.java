@@ -3,17 +3,17 @@ package com.fpl.entity;
 public class Difficulty {
 
     private int id;
-	private String team;
+	private Team team;
 	private int home;
 	private int away;
 
 
-	public String getTeam() {
+	public Team getTeam() {
 		return team;
 	}
 
 
-	public void setTeam(String team) {
+	public void setTeam(Team team) {
 		this.team = team;
 	}
 

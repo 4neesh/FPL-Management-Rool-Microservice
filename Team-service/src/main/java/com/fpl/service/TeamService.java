@@ -1,9 +1,11 @@
 package com.fpl.service;
 
-import com.fpl.repository.TeamRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import com.fpl.repository.TeamRepository;
 
 @Service
 public class TeamService {
@@ -13,14 +15,21 @@ public class TeamService {
     public TeamService(TeamRepository repository){
         this.teamRepository = repository;
     }
+    
+    public void save(Team team) {
+    	teamRepository.save(team);
+    }
 
-    public main.java.com.fpl.service.Team findTeam(long id) {
-        Optional<main.java.com.fpl.service.Team> team = teamRepository.findById(id);
+    public Team findTeam(long id) {
+        Optional<Team> team = teamRepository.findById(id);
         if(team != null){
             return team.get();
         }
         return null;
     }
 
+    public List<Team> findAll(){
+    	return teamRepository.findAll();
+    }
 
 }
