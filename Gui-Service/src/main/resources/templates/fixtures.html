@@ -34,8 +34,8 @@
             <td th:text="${tempFixture.gameweek}"/>
 
             <td th:text="${tempFixture.home.team}"/>
-            <td th:text="${homeMap.get(2)}"/>
- 			<td>D</td>
+            <td th:text="${tempFixture.home.difficulty.home}"/>
+ 			<td th:text="${tempFixture.away.difficulty.away}"/>
             <td th:text="${tempFixture.away.team}"/>
            <td>
                <a

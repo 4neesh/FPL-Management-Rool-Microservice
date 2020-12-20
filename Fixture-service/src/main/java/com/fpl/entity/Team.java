@@ -1,10 +1,13 @@
 package com.fpl.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,7 +22,8 @@ public class Team {
 	@Column(name="Team")
 	private String team;
 	
-	@Column(name ="Difficulty")
+	@OneToOne(cascade= CascadeType.ALL)
+	@JoinColumn(name ="Difficulty")
 	private Difficulty difficulty;
 
 	public String getTeam() {
@@ -32,6 +36,14 @@ public class Team {
 
 	public int getId() {
 		return id;
+	}
+
+	public Difficulty getDifficulty() {
+		return difficulty;
+	}
+
+	public void setDifficulty(Difficulty difficulty) {
+		this.difficulty = difficulty;
 	}
 	
 	

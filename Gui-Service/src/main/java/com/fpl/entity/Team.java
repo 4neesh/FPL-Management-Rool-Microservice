@@ -1,12 +1,16 @@
 package com.fpl.entity;
 
+
 public class Team {
 
     private int id;
+	
 	private String team;
+
 	private Difficulty difficulty;
 	
-
+	
+	
 	public Difficulty getDifficulty() {
 		return difficulty;
 	}
