@@ -11,22 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fpl.entity.Team;
 import com.fpl.service.TeamService;
-import com.fpl.service.TeamServiceImpl;
 
 @RestController
 public class TeamController {
 	
 	@Autowired
     private TeamService teamService;
-
-       
-    private List<Team> teams;
-
-    @GetMapping("/te")
-    public String get() {
-    	System.out.println("LO");
-    	return "LO";
-    }
 
     @GetMapping("/getTeam/{id}")
     public Team getTeam(@PathVariable int id ) {
@@ -35,7 +25,6 @@ public class TeamController {
 
     @GetMapping("/getTeams")
     public List<Team> getTeams(){
-
         return teamService.findAll();
        
     }

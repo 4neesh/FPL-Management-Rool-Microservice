@@ -18,6 +18,9 @@ public class Team {
 	
 	@Column(name="Team")
 	private String team;
+	
+	@Column(name ="Difficulty")
+	private Difficulty difficulty;
 
 	public String getTeam() {
 		return team;

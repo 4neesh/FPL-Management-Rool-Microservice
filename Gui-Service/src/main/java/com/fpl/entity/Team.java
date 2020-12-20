@@ -4,6 +4,16 @@ public class Team {
 
     private int id;
 	private String team;
+	private Difficulty difficulty;
+	
+
+	public Difficulty getDifficulty() {
+		return difficulty;
+	}
+
+	public void setDifficulty(Difficulty difficulty) {
+		this.difficulty = difficulty;
+	}
 
 	public String getTeam() {
 		return team;
