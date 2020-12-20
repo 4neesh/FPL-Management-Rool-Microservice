@@ -1,14 +1,11 @@
 package com.fpl.entity;
 
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,9 +19,8 @@ public class Difficulty {
     private int id;
 
 	
-	@OneToOne(cascade= CascadeType.ALL)
-	@JoinColumn(name="team") 
-	private Team team;
+	@Column(name="team") 
+	private int team;
 
 	@Column(name="Home")
 	private int home;
@@ -59,12 +55,12 @@ public class Difficulty {
 	}
 
 
-	public Team getTeam() {
+	public int getTeam() {
 		return team;
 	}
 
 
-	public void setTeam(Team team) {
+	public void setTeam(int team) {
 		this.team = team;
 	}
 
