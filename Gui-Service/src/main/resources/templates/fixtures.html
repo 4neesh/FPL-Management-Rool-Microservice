@@ -31,12 +31,48 @@
         <tbody>
 
         <tr th:each="tempFixture : ${fixtures}">
+        
             <td th:text="${tempFixture.gameweek}"/>
-
-            <td th:text="${tempFixture.home.team}"/>
-            <td th:text="${tempFixture.home.difficulty.home}"/>
- 			<td th:text="${tempFixture.away.difficulty.away}"/>
-            <td th:text="${tempFixture.away.team}"/>
+            <td th:style="${tempFixture.away.difficulty.away < 2?
+				            'background-color: maroon;'
+				            :
+				            (
+				            tempFixture.away.difficulty.away > 5 ?
+				            'background-color: green;'
+				            :
+				            (
+				            tempFixture.away.difficulty.away < 4 ?
+				            'background-color: red;'
+				            :
+				            'background-color: grey;'
+				           
+				            )
+				             )
+				            }"
+            th:text="${tempFixture.home.team}"/>
+            <td  
+            th:text="${tempFixture.home.difficulty.home}"/>
+ 			<td
+ 			
+ 			th:text="${tempFixture.away.difficulty.away}"/>
+            
+             <td th:style="${tempFixture.home.difficulty.home < 2?
+				            'background-color: maroon;'
+				            :
+				            (
+				            tempFixture.home.difficulty.home > 5 ?
+				            'background-color: green;'
+				            :
+				            (
+				            tempFixture.home.difficulty.home < 4 ?
+				            'background-color: red;'
+				            :
+				            'background-color: grey;'
+				           
+				            )
+				             )
+				            }"
+            th:text="${tempFixture.away.team}"/>
            <td>
                <a
                   th:href="@{updateFixture(fixtureId=${tempFixture.id})}"

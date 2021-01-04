@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Fixtures</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <hr>
+    <h2>
+        <a class="btn btn-dark btn-sm" th:href="@{/}">Home</a> <br>
+        FPL Difficulties 2020-21
+    </h2>
+    <hr>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+			<th>Team</th>
+            <th>Home</th>
+            <th>Away </th>
+            <th>Update <a class="btn btn-success btn-sm r" th:href="@{add-difficulty}">Add new difficulty</a>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="difficulty : ${teams}">
+            <td th:text="${difficulty.team}"/>
+            <td th:text="${difficulty.difficulty.home}"/>
+ 			<td th:text="${difficulty.difficulty.away}"/>
+           <td>
+               <a
+                  th:href="@{updateDfficulty(difficultyId=${difficulty.id})}"
+                  class="btn btn-info btn-sm">Edit</a>
+               <a
+                  onclick="if (!(confirm('Are you sure you want to delete?'))) return false"
+                  th:href="@{delete-difficulty(difficultyId=${difficulty.id})}"
+                  class="btn btn-danger btn-sm r">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html> 
